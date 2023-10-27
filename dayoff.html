@@ -14,6 +14,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
 
+
     </head>
     <body>
         <!-- create navbar -->
@@ -99,16 +100,31 @@
         <!-- Bootstrap -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
         <script>
-
           document.getElementById('submit-button').addEventListener('click', (e)=> {
             e.preventDefault();
 
-            const account = document.getElementById('gmail-account').value;
-            const password = document.getElementById('gmail-password').value;
-            const link = document.getElementById('meeting-link').value;
-            const startingTime = document.getElementById('starting-time').value;
+            const content = `
+            gmail_account = "${document.getElementById('gmail-account').value}"
+            password = "${document.getElementById('gmail-password').value}"
+            meeting_link = "${document.getElementById('meeting-link').value}"
+            starting_time = "${document.getElementById('starting-time').value}"
+            `;      
             
-            console.log(account, password, link, startingTime);
+            // Create element with <a> tag
+            const link = document.createElement("a");
+
+            // Create a blog object with the file content which you want to add to the file
+            const file = new Blob([content], { type: 'application/python' });
+
+            // Add file content in the object URL
+            link.href = URL.createObjectURL(file);
+
+            // Add file name
+            link.download = "sample.py";
+
+            // Add click event to <a> tag to save file.
+            link.click();
+            URL.revokeObjectURL(link.href);
           });
         </script>
     </body>
