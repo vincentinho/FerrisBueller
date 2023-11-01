@@ -29,6 +29,28 @@ def write(selector_type, path_to_element, content, wait_time):
         click_element.send_keys(content)
         time.sleep(wait_time)
 
+# time difference in seconds function 
+def time_difference_in_seconds(hour, minute):
+    # get current time
+    current_time = datetime.datetime.now().time() #16:48:33.441141, datetime.time object
+    #current_time_value = datetime.datetime.strptime(str(current_time), "%H:%M:%S:%SS")
+    i = type(current_time)
+    current_delta = datetime.timedelta(hours=current_time.hour, minutes=current_time.minute, seconds=current_time.second)
+
+    # create ending time variable
+    test_time = datetime.time(hour, minute) #20:00:00, datetime.time object
+    test_delta = datetime.timedelta(hours=test_time.hour, minutes=test_time.minute, seconds=test_time.second)
+
+    a = type(test_time)
+
+    # subtract current time from ending time
+    difference_delta = test_delta - current_delta
+
+    # transform difference to seconds
+    difference_delta.total_seconds()
+    return difference_delta.total_seconds()
+
+
 driver = Driver(uc=True)
 
 driver.get('https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AXo7B7WX_wrivAACh0TAbFpPcdmqaKlnznwQGhVeKNaBo5S1BJARBkliHBJJ4CI_tMdwEoRrRpjK_w&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1275157963%3A1691870213375590')
@@ -68,28 +90,15 @@ click_on("css", ".nMIz8e .VfPpkd-dgl2Hf-ppHlrf-sM5MNb .ksBjEc", 5)
 click_on("css", ".XCoPyb .VfPpkd-dgl2Hf-ppHlrf-sM5MNb .nCP5yc", 60)
 # ps: HTML returns hh:mm time values
 """
+starting_time = "14:30"
 
-def time_difference_in_seconds(hour, minute):
-    # get current time
-    current_time = datetime.datetime.now().time() #16:48:33.441141, datetime.time object
-    #current_time_value = datetime.datetime.strptime(str(current_time), "%H:%M:%S:%SS")
-    i = type(current_time)
-    current_delta = datetime.timedelta(hours=current_time.hour, minutes=current_time.minute, seconds=current_time.second)
-
-    # create ending time variable
-    test_time = datetime.time(hour, minute) #20:00:00, datetime.time object
-    test_delta = datetime.timedelta(hours=test_time.hour, minutes=test_time.minute, seconds=test_time.second)
-
-    a = type(test_time)
-
-    # subtract current time from ending time
-    difference_delta = test_delta - current_delta
-
-    # transform difference to seconds
-    difference_delta.total_seconds()
+hour = int(starting_time[0] + starting_time[1]) #14 (int)
+minutes = int(starting_time[3] + starting_time[4]) #30 (int)
 
 
-    return difference_delta.total_seconds()
+ending_time = "10:34"
 
-print(time_difference_in_seconds(22, 00))
+finish_hour = int(ending_time[0] + ending_time[1]) #10 (int)
+finish_minutes = int(ending_time[3] + ending_time[4]) #34 (int)
+
 
