@@ -69,23 +69,27 @@ click_on("css", ".XCoPyb .VfPpkd-dgl2Hf-ppHlrf-sM5MNb .nCP5yc", 60)
 # ps: HTML returns hh:mm time values
 """
 
-# get current time
-current_time = datetime.datetime.now().time() #16:48:33.441141, datetime.time object
-#current_time_value = datetime.datetime.strptime(str(current_time), "%H:%M:%S:%SS")
-i = type(current_time)
-current_delta = datetime.timedelta(hours=current_time.hour, minutes=current_time.minute, seconds=current_time.second)
+def time_difference_in_seconds(hour, minute):
+    # get current time
+    current_time = datetime.datetime.now().time() #16:48:33.441141, datetime.time object
+    #current_time_value = datetime.datetime.strptime(str(current_time), "%H:%M:%S:%SS")
+    i = type(current_time)
+    current_delta = datetime.timedelta(hours=current_time.hour, minutes=current_time.minute, seconds=current_time.second)
 
-# create ending time variable
-test_time = datetime.time(20, 00) #20:00:00, datetime.time object
-test_delta = datetime.timedelta(hours=test_time.hour, minutes=test_time.minute, seconds=test_time.second)
+    # create ending time variable
+    test_time = datetime.time(hour, minute) #20:00:00, datetime.time object
+    test_delta = datetime.timedelta(hours=test_time.hour, minutes=test_time.minute, seconds=test_time.second)
 
-a = type(test_time)
+    a = type(test_time)
 
-# subtract current time from ending time
-difference_delta = test_delta - current_delta
+    # subtract current time from ending time
+    difference_delta = test_delta - current_delta
 
-# transform difference to seconds
-difference_delta.total_seconds()
+    # transform difference to seconds
+    difference_delta.total_seconds()
 
-print(difference_delta)
-print(difference_delta.total_seconds())
+
+    return difference_delta.total_seconds()
+
+print(time_difference_in_seconds(22, 00))
+
