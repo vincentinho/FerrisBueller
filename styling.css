@@ -1,0 +1,111 @@
+body {
+    font-family: Arvo, serif;
+    background: url(https://img.huffingtonpost.com/asset/630645cc2000002e00f2ce63.jpeg?cache=TyUE1WfnNu&ops=scalefit_720_noupscale) no-repeat center center;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* styling the navbar*/
+
+.navbar-header{
+    height: 100%;
+    vertical-align: middle;
+}
+
+.logo {
+    height: 35px;
+    vertical-align: middle;
+}
+
+.navbar-dark {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.navbar-nav li {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 40px;
+    padding: 10px 0;
+    white-space: nowrap;
+}
+
+/* style footer */
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: grey;
+    font-size: 15px;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+.footer > :nth-child(1) > :nth-child(2) {
+    float: right;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 85px;
+}
+
+#intro-text, #how-it-works {
+    color: white;
+    text-align: justify;
+    padding: 0 20px;
+}
+
+#logo-src {
+    text-decoration: none;
+    color: grey;
+}
+
+#intro-text, #how-it-works {
+    height: 350px;
+    width: 700px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.85);
+    margin-top:25px;
+    margin: auto;
+}
+
+form {
+    height: 450px;
+    width: 700px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.85);
+    margin-top:25px;
+    margin: auto;
+}
+
+label {
+    color: white;
+}
+
+.form-control {
+    margin-top: 10px;
+    width: 90%; 
+    margin: auto;
+}
+
+.form-group {
+    margin-top: 20px;
+}
+
+label {
+    margin-left: 35px;
+}
+
+.btn-primary {
+    width: 30%;
+    display: table;
+    margin: auto;
+    margin-top: 40px;
+}
+
+#warning {
+    color: lightgray;
+    display: flex;
+    justify-content: center;
+}

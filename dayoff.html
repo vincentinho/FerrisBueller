@@ -137,27 +137,45 @@ def write(selector_type, path_to_element, content, wait_time):
 
 # variables
 starting_time = "${document.getElementById('starting-time').value}" 
-hour = int(starting_time[0] + starting_time[1]) # (int)
-minutes = int(starting_time[3] + starting_time[4]) # (int)
+
+# I need to make sure that if the first integer of HH: is 0 I transform it into a 0oH
+if int(starting_time[0]) == 0:
+    hour = int(starting_time[1])
+else: 
+    hour = int(starting_time[0] + starting_time[1]) # (int)
+
+# I need to make sure that if the first integer of MM: is 0 I transform it into a 0oH
+if int(starting_time[3]) == 0:
+    minutes = int(starting_time[4])
+else: 
+    minutes = int(starting_time[3] + starting_time[4]) # (int)
+
 
 
 ending_time = "${document.getElementById('ending-time').value}" 
-finish_hour = int(ending_time[0] + ending_time[1]) # (int)
-finish_minutes = int(ending_time[3] + ending_time[4]) # (int)
+# I need to make sure that if the first integer of HH: is 0 I transform 
+if int(ending_time[0]) == 0:
+    finish_hour = int(ending_time[1])
+else: 
+    finish_hour = int(ending_time[0] + ending_time[1]) # (int)
+
+# I need to make sure that if the first integer of MM: is 0 I transform it into a 0oH
+if int(ending_time[3]) == 0:
+    finish_minutes = int(ending_time[4])
+else: 
+    finish_minutes = int(ending_time[3] + ending_time[4]) # (int)
 
 
 # time difference in seconds function 
 def time_difference_in_seconds(hour, minute):
     # get current time
     current_time = datetime.datetime.now().time() #16:48:33.441141, datetime.time object
-    #current_time_value = datetime.datetime.strptime(str(current_time), "%H:%M:%S:%SS")
-    i = type(current_time)
     current_delta = datetime.timedelta(hours=current_time.hour, minutes=current_time.minute, seconds=current_time.second)
+    i = type(current_time)
 
     # create ending time variable
     test_time = datetime.time(hour, minute) # datetime.time object
     test_delta = datetime.timedelta(hours=test_time.hour, minutes=test_time.minute, seconds=test_time.second)
-
     a = type(test_time)
 
     # subtract current time from ending time
@@ -206,6 +224,12 @@ click_on("css", ".nMIz8e .VfPpkd-dgl2Hf-ppHlrf-sM5MNb .ksBjEc", 5)
 # Click on "Ask to join" | the following waiting time should: ending time - current time
 click_on("css", ".XCoPyb .VfPpkd-dgl2Hf-ppHlrf-sM5MNb .nCP5yc", time_difference_in_seconds(finish_hour, finish_minutes))
 # ps: HTML returns hh:mm time values
+
+# click on "leave"
+click_on("css", ".R5ccN .NHaLPe .yHy1rc", 2)
+
+# quit bot
+driver.quit()
             `;      
             
             // Create element with <a> tag

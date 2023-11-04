@@ -1,0 +1,50 @@
+1691633597300	geckodriver	INFO	Listening on 127.0.0.1:51296
+1691633597318	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/vr/b32yycl13ylg3_sjwy88sp980000gn/T/rust_mozprofileIo02bb"
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+1691633598481	Marionette	INFO	Marionette enabled
+1691633598722	Marionette	INFO	Listening on port 51307
+WebDriver BiDi listening on ws://localhost:51297
+Read port: 51307
+1691633598972	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/vr/b32yycl13ylg3_sjwy88sp980000gn/T/rust_mozprofileIo02bb/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:51297/devtools/browser/ba12f98a-8a7a-4037-8d0d-6eda5a8f4cb4
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+[2023-08-10T02:13:24Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-10T02:13:24Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-10T02:13:24Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2023-08-10T02:13:24Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+[GFX1-]: Unrecognized feature ACCELERATED_CANVAS2D
+1691634110305	Marionette	INFO	Stopped listening on port 51307
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1692042500962	geckodriver	INFO	Listening on 127.0.0.1:56008
+1692042501482	mozrunner::runner	INFO	Running command: MOZ_CRASHREPORTER="1" MOZ_CRASHREPORTER_NO_REPORT="1" MOZ_CRASHREPORTER_SHUTDOWN="1" MOZ_NO_REMOTE="1" "/App ... s" "localhost" "-foreground" "-no-remote" "-profile" "/var/folders/vr/b32yycl13ylg3_sjwy88sp980000gn/T/rust_mozprofileJueWQc"
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+1692042502381	Marionette	INFO	Marionette enabled
+1692042502607	Marionette	INFO	Listening on port 56019
+Read port: 56019
+WebDriver BiDi listening on ws://localhost:56009
+1692042502834	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /var/folders/vr/b32yycl13ylg3_sjwy88sp980000gn/T/rust_mozprofileJueWQc/search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:56009/devtools/browser/74401c19-e113-4304-bf76-b77d471e3209
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+JavaScript warning: https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AXo7B7WX_wrivAACh0TAbFpPcdmqaKlnznwQGhVeKNaBo5S1BJARBkliHBJJ4CI_tMdwEoRrRpjK_w&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S1275157963%3A1691870213375590 line 4 > injectedScript line 2 > eval line 3856 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+_RegisterApplication(), FAILED TO establish the default connection to the WindowServer, _CGSDefaultConnection() is NULL.
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://accounts.google.com."
+1692042662971	Marionette	INFO	Stopped listening on port 56019
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
